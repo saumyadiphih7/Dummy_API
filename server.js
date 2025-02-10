@@ -23,6 +23,10 @@ app.use(express.urlencoded({ extended: true }));
 import userRouter from "./route/user.route.js";
 app.use("/api/user", userRouter);
 
+app.get("/", (req, res) => {
+  res.send(`Server Running Successfully"!`);
+});
+
 
 
 app.use((req, res, next) => {
